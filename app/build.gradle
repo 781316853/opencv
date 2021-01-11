@@ -13,18 +13,13 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        externalNativeBuild {
-            ndk {
-                abiFilter("armeabi-v7a")
-            }
-        }
     }
 
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
-        }
-    }
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ['libs']
+//        }
+//    }
     buildTypes {
         release {
             minifyEnabled false
@@ -41,5 +36,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation project(':openCVLibrary341')
+    implementation project(':sdk')
 }
